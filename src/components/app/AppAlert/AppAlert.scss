@@ -1,0 +1,18 @@
+.app-alert {
+  padding: 20px;
+  color: white;
+  opacity: 0.83;
+  transition: opacity 0.6s;
+
+  &__error {
+    background-color: #f44336;
+  }
+
+  &__info {
+    background-color: #2196f3;
+  }
+
+  p {
+    margin: 0;
+  }
+}

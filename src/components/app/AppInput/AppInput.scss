@@ -9,6 +9,11 @@
     border: none;
     width: inherit;
     padding: 16px 18px;
+
+    &::placeholder {
+      color: var(--app-color-muted);
+      opacity: 1;
+    }
   }
 
   &__wrapper {
@@ -24,5 +29,18 @@
 
   &__append {
     margin: 0 21px;
+  }
+
+  &__hint {
+    margin: 17px 0 0 0;
+  }
+
+  &__error &__input {
+    border: 1px solid var(--app-color-error);
+    outline: var(--app-color-error);
+  }
+
+  &__error &__hint {
+    color: var(--app-color-error);
   }
 }

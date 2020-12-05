@@ -3,6 +3,7 @@
   --app-color-secondary: #0e0e0e;
   --app-color-muted: #999999;
   --app-color-text: var(--app-color-secondary);
+  --app-color-error: #ea0005;
 }
 
 body {
@@ -90,4 +91,8 @@ a {
 
 .justify-center {
   justify-content: center;
+}
+
+.mb-5 {
+  margin-bottom: 20px;
 }

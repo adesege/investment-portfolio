@@ -8,11 +8,16 @@ interface AppButtonProps {
   label: string;
   className: string;
   type?: 'button' | 'submit' | 'reset';
-  size?: 'big' | 'small'
+  size?: 'big' | 'small';
+  disabled?: boolean;
 }
 
 const AppButton = (props: PropsWithChildren<AppButtonProps>) => (
-  <button type={props.type} className={clsx(['app-button', { [`app-button__size--${props.size}`]: !!props.size }, props.className])}>
+  <button
+    type={props.type}
+    disabled={props.disabled}
+    className={clsx(['app-button', { [`app-button__size--${props.size}`]: !!props.size }, props.className])}
+  >
     {props.prepend && <div className="app-button__prepend">{ props.prepend }</div>}
     <div className="app-button__wrapper">{props.label || props.children}</div>
     {props.append && <div className="app-button__append">{ props.append }</div>}
@@ -22,6 +27,7 @@ const AppButton = (props: PropsWithChildren<AppButtonProps>) => (
 AppButton.defaultProps = {
   type: 'button',
   size: 'small',
+  disabled: false,
 };
 
 export default AppButton;

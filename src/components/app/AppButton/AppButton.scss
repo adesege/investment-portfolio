@@ -5,6 +5,11 @@
   border: none;
   cursor: pointer;
 
+  &:disabled {
+    opacity: 0.15;
+    cursor: not-allowed;
+  }
+
   &__size--big {
     height: 50px;
     padding: 0 27px;
