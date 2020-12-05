@@ -1,0 +1,93 @@
+:root {
+  --app-color-primary: #258c60;
+  --app-color-secondary: #0e0e0e;
+  --app-color-muted: #999999;
+  --app-color-text: var(--app-color-secondary);
+}
+
+body {
+  font-family: "Apercu";
+  font-style: normal;
+  color: var(--app-color-text);
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-subtitle {
+  font-size: 14px;
+}
+
+.icon {
+  display: inline-block;
+
+  svg {
+    vertical-align: middle;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.primary {
+  color: var(--app-color-primary);
+  &--bg {
+    background-color: var(--app-color-primary);
+    color: #fff;
+  }
+}
+
+.secondary {
+  color: var(--app-color-secondary);
+}
+
+.muted {
+  color: var(--app-color-muted);
+}
+
+.white {
+  &--icon {
+    svg {
+      fill: #fff;
+    }
+  }
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}

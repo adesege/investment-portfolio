@@ -5,6 +5,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
 const path = require('path');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 const dotenv = require('dotenv').config();
 
@@ -56,6 +57,7 @@ module.exports = {
     publicPath: '/',
   },
   resolve: {
+    plugins: [new TsconfigPathsPlugin()],
     extensions: ['.tsx', '.ts', '.js'],
   },
   module: {
@@ -82,7 +84,20 @@ module.exports = {
           'css-loader',
           'postcss-loader',
         ],
-      }],
+      },
+      {
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+      },
+      {
+        test: /\.(woff|woff2|ttf|otf)$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: 'fonts/',
+        },
+      },
+    ],
   },
   plugins,
   optimization: {

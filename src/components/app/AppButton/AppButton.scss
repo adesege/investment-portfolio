@@ -1,0 +1,27 @@
+.app-button {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+
+  &__size--big {
+    height: 50px;
+    padding: 0 27px;
+  }
+
+  &__size--small {
+    height: 40px;
+    padding: 0 17px;
+  }
+
+  &.primary--bg {
+    &:hover,
+    &:focus {
+      background-color: #fff;
+      color: var(--app-color-primary);
+      outline: var(--app-color-primary);
+      border: 1px solid var(--app-color-primary);
+    }
+  }
+}
