@@ -1,11 +1,12 @@
 import clsx from 'clsx';
 import { PropsWithChildren } from 'react';
 import { AppIconProps } from './AppIcon';
+import './AppIcon.scss';
 
 const AppIcon = (props: PropsWithChildren<AppIconProps>) => (
   <span
-    className={clsx(['icon', {
-      [`icon__size--${props.size}`]: !!props.size,
+    className={clsx(['app-icon icon', {
+      [`app-icon__size--${props.size}`]: !!props.size,
       [`${props.color}--icon`]: !!props.color,
     }])}
   >

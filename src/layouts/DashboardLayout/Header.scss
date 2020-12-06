@@ -1,0 +1,14 @@
+.dl-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 23px;
+
+  &__nav {
+    display: flex;
+    align-items: center;
+
+    .app-button + .app-button {
+      margin-left: 24px;
+    }
+  }
+}

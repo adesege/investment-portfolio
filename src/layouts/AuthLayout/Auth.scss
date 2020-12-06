@@ -48,7 +48,7 @@
     flex: 0 0 19.58%;
     width: 19.58%;
     height: inherit;
-    padding: 44px 0 0 55px;
+    padding: 44px 85px 0 55px;
   }
 
   &__banner {
@@ -103,5 +103,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  &__logo {
+    width: 100%;
   }
 }

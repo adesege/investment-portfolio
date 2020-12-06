@@ -13,6 +13,7 @@ import AppLoader from './components/app/AppLoader';
 import { AUTH_USER_PAYLOAD_KEY } from './constants';
 import { IRoute } from './interfaces/route';
 import AuthLayout from './layouts/AuthLayout';
+import DashboardLayout from './layouts/DashboardLayout';
 import store from './store';
 import { logout, setCurrentUser } from './store/auth';
 import { showFlash } from './store/flash';
@@ -45,6 +46,7 @@ if (getAuthToken()) {
 const Main = lazy(() => import(/* webpackChunkName: "pages/main" */ './pages/Main'));
 const AuthSignup = lazy(() => import(/* webpackChunkName: "pages/auth/signup" */ './pages/Auth/Signup'));
 const AuthSignin = lazy(() => import(/* webpackChunkName: "pages/auth/signin" */ './pages/Auth/Signin'));
+const Dashboard = lazy(() => import(/* webpackChunkName: "pages/dashboard" */ './pages/Dashboard'));
 
 const App = () => (
   <StrictMode>
@@ -57,6 +59,20 @@ const App = () => (
               path={IRoute.main}
               component={Main}
             />
+
+            <Route path="/dashboard">
+              <DashboardLayout>
+                <Suspense fallback={<AppLoader center />}>
+                  <Switch>
+                    <Route
+                      exact
+                      path={IRoute.dashboard}
+                      component={Dashboard}
+                    />
+                  </Switch>
+                </Suspense>
+              </DashboardLayout>
+            </Route>
 
             <Route path="/auth">
               <AuthLayout>

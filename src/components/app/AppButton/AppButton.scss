@@ -10,6 +10,10 @@
     cursor: not-allowed;
   }
 
+  &__wrapper {
+    display: flex;
+  }
+
   &__size--big {
     height: 50px;
     padding: 0 27px;
@@ -18,15 +22,31 @@
   &__size--small {
     height: 40px;
     padding: 0 17px;
+    line-height: 40px;
   }
 
   &.primary--bg {
-    &:hover,
-    &:focus {
+    &:hover:not(:disabled),
+    &:focus:not(:disabled) {
       background-color: #fff;
       color: var(--app-color-primary);
       outline: var(--app-color-primary);
       border: 1px solid var(--app-color-primary);
+    }
+  }
+
+  &__icon {
+    &:hover:not(:disabled),
+    &:focus:not(:disabled) {
+      border-radius: 50%;
+      background-color: #dfdfdf;
+    }
+
+    &.app-button__size--small {
+      outline: none;
+      justify-content: center;
+      width: 40px;
+      padding: 0px;
     }
   }
 }

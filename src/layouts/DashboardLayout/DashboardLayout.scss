@@ -1,0 +1,92 @@
+.dashboard-layout {
+  height: inherit;
+  display: flex;
+  width: 100%;
+
+  &__sidebar--left {
+    background-color: #1f1f1f;
+    flex: 0 0 300px;
+    width: 300px;
+    height: inherit;
+    padding: 44px 85px 44px 55px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  &__content {
+    flex: 1;
+    padding: 23px 59px 23px 63px;
+  }
+
+  &__logo {
+    width: 100%;
+  }
+
+  &__nav {
+    margin: 88px 0 0 0;
+    font-size: 18px;
+  }
+
+  &__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item + &__item {
+    margin-top: 47px;
+  }
+
+  &__link {
+    color: #fff;
+    display: flex;
+    align-items: center;
+
+    .icon svg path {
+      fill: #fff;
+    }
+
+    &.active,
+    &:hover {
+      color: var(--app-color-primary);
+
+      .icon svg path {
+        fill: var(--app-color-primary);
+      }
+    }
+
+    &--text {
+      display: inline-block;
+      margin-left: 23px;
+    }
+  }
+
+  &__nav--footer {
+    margin-top: 0;
+
+    .icon svg path:first-of-type {
+      fill: none;
+    }
+
+    .icon svg {
+      fill: #fff;
+    }
+  }
+
+  &__support {
+    padding: 9.5px 11.5px;
+    border: 1px solid var(--app-color-primary);
+    border-radius: 19px;
+    background-color: rgba(37, 140, 96, 0.15);
+
+    .icon svg,
+    .icon svg path {
+      fill: var(--app-color-primary);
+    }
+  }
+
+  &__support &__link {
+    color: var(--app-color-primary);
+  }
+}

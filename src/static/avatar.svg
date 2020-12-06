@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>CA96A757-958C-41AF-BEE4-2539E8AD90A5</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="36" height="36" rx="18"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-Copy-40" transform="translate(-1825.000000, -22.000000)">
+            <g id="rahul" transform="translate(1825.000000, 22.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#1F1F1F" xlink:href="#path-1"></use>
+                <path d="M18,1.63428731 C21.3875134,3.70200926 24.0449784,7.96878378 25.9723949,14.4346109 L21.3746012,17.5210367 L25.3771854,33.6240234 L-2.75,41.6875 L-2.75,-3.75 C7.69581991,-2.22819707 14.6124866,-0.433434639 18,1.63428731 Z" id="Path-2" fill="#FDCFB7" mask="url(#mask-2)"></path>
+                <path d="M24.1757812,28.1750488 C19.5864258,29.2837728 17.4936523,31.8731283 17.8974609,35.9431152 L25.4448242,33.7617188 L24.1757812,28.1750488 Z" id="Path-11" fill="#F4828C" mask="url(#mask-2)"></path>
+                <circle id="Oval-2" fill="#775C6A" mask="url(#mask-2)" cx="16.5" cy="13" r="1.5"></circle>
+                <path d="M23.2462267,22.3688884 C21.1641511,23.5211904 19.0820756,24.0973414 17,24.0973414" id="Path-5" stroke="#775C6A" stroke-width="2" mask="url(#mask-2)"></path>
+                <path d="M11.9560615,10.96988 C13.5623553,9.61956357 15.2302237,8.72353995 16.9596667,8.28180915" id="Path-6" stroke="#775C6A" stroke-width="2" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

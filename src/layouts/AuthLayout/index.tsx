@@ -1,17 +1,15 @@
 import { PropsWithChildren } from 'react';
-import { useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
+import useAuth from '~/hooks/use-auth';
 import { IRoute } from '~/interfaces/route';
-import { RootState } from '~/store';
-import { AuthState } from '~/store/auth/auth.interface';
 import './Auth.scss';
 import AuthNav from './AuthNav';
 import LeftSidebar from './LeftSidebar';
 
 const AuthLayout = (props: PropsWithChildren<any>) => {
-  const authUser = useSelector<RootState, AuthState>((state) => state.auth);
+  const { isAuthenticated } = useAuth();
 
-  if (authUser.isAuthenticated) {
+  if (isAuthenticated) {
     return <Redirect to={IRoute.main} />;
   }
 
