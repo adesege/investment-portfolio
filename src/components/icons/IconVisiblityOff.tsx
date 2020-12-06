@@ -1,9 +1,13 @@
 import VisibilityOff from '~/assets/svg/visibility-off.svg';
+import AppIcon from '../app/AppIcon';
+import { AppIconProps } from '../app/AppIcon/AppIcon';
 
-const IconVisiblityOff = () => (
-  <span className="icon">
+interface IconVisiblityOffProps extends AppIconProps {}
+
+const IconVisiblityOff = (props: IconVisiblityOffProps) => (
+  <AppIcon {...props}>
     <VisibilityOff />
-  </span>
+  </AppIcon>
 );
 
 export default IconVisiblityOff;

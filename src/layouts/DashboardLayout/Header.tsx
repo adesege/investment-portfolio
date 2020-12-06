@@ -9,7 +9,7 @@ const Header = () => (
     <AppSpacer />
 
     <nav className="dl-header__nav">
-      <AppButton icon><IconNotificationBell /></AppButton>
+      <AppButton icon><IconNotificationBell size="large" /></AppButton>
       <AppButton icon><AppAvatar src="/avatar.svg" /></AppButton>
     </nav>
   </header>

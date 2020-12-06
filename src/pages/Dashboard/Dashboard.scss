@@ -1,0 +1,29 @@
+.dashboard {
+  &__header {
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    margin: 0 0 5px 0;
+  }
+
+  &__description {
+    margin: 0;
+  }
+
+  &__banners {
+    display: flex;
+    align-items: center;
+    margin: 65px -17.5px;
+  }
+
+  &__banners .app-banner__description {
+    line-height: 25px;
+  }
+
+  &__banner {
+    padding: 0 17.5px;
+    flex: 1;
+  }
+}

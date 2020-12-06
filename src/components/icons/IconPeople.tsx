@@ -5,7 +5,7 @@ import { AppIconProps } from '../app/AppIcon/AppIcon';
 interface IconPeopleProps extends AppIconProps {}
 
 const IconPeople = (props: IconPeopleProps) => (
-  <AppIcon color={props.color}>
+  <AppIcon {...props}>
     <People />
   </AppIcon>
 );

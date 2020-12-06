@@ -5,7 +5,7 @@ import { AppIconProps } from '../app/AppIcon/AppIcon';
 interface IconNotificationBellProps extends AppIconProps {}
 
 const IconNotificationBell = (props: IconNotificationBellProps) => (
-  <AppIcon color={props.color}>
+  <AppIcon {...props}>
     <NotificationBell />
   </AppIcon>
 );

@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'Apercu';
+  font-family: "Apercu";
   font-style: normal;
   font-weight: 300;
   font-display: swap;
@@ -7,8 +7,15 @@
 }
 
 @font-face {
-  font-family: 'Apercu';
+  font-family: "Apercu";
   font-weight: 100;
   font-display: swap;
   src: url("./Apercu Light.otf");
+}
+
+@font-face {
+  font-family: "Apercu";
+  font-weight: 500;
+  font-display: swap;
+  src: url("./Apercu Medium.otf");
 }

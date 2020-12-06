@@ -1,9 +1,13 @@
 .app-button {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  font-size: 18px;
-  border: none;
-  cursor: pointer;
+  justify-content: center;
+
+  &:not(a) {
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+  }
 
   &:disabled {
     opacity: 0.15;
@@ -19,10 +23,11 @@
     padding: 0 27px;
   }
 
-  &__size--small {
+  &__size--small:not(a) {
     height: 40px;
     padding: 0 17px;
     line-height: 40px;
+    width: 160px;
   }
 
   &.primary--bg {

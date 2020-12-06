@@ -5,7 +5,7 @@ import { AppIconProps } from '../app/AppIcon/AppIcon';
 interface IconWalletProps extends AppIconProps {}
 
 const IconWallet = (props: IconWalletProps) => (
-  <AppIcon color={props.color}>
+  <AppIcon {...props}>
     <Wallet />
   </AppIcon>
 );

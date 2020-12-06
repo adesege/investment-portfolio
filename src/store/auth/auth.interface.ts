@@ -2,6 +2,7 @@ export interface IAuthUser {
   id: string;
   firstname: string;
   lastname: string;
+  email: string;
 }
 
 export interface ISetCurrentUser {

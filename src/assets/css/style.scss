@@ -37,6 +37,14 @@ button {
   font-size: 14px;
 }
 
+.text-heading {
+  font-size: 36px;
+}
+
+.text-subheading {
+  font-size: 24px;
+}
+
 .icon {
   display: inline-block;
 
@@ -55,6 +63,8 @@ button {
 
 .primary {
   color: var(--app-color-primary);
+  fill: var(--app-color-primary);
+
   &--bg {
     background-color: var(--app-color-primary);
     color: #fff;
@@ -99,4 +109,16 @@ button {
 
 .mb-5 {
   margin-bottom: 20px;
+}
+
+.font-normal {
+  font-weight: normal;
+}
+
+.font-light {
+  font-weight: 100;
+}
+
+.font-medium {
+  font-weight: 500;
 }

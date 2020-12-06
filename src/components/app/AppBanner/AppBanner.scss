@@ -1,0 +1,41 @@
+.app-banner {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  border-left: 7px solid var(--app-banner-color);
+  padding: 23px 30px;
+  border-radius: 2px 0 0 2px;
+
+  &__info {
+    --app-banner-color: #419afa;
+  }
+
+  &__title {
+    color: var(--app-banner-color);
+    font-size: 18px;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  &__description {
+    font-size: 14px;
+    margin: 0;
+    font-weight: 100;
+  }
+
+  > .app-icon {
+    font-size: 45px;
+    display: inline-block;
+    margin-right: 22px;
+  }
+
+  > .app-icon svg {
+    fill: var(--app-banner-color);
+    border-color: var(--app-banner-color);
+  }
+
+  &__action {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+}

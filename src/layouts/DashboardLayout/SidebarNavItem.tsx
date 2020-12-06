@@ -1,11 +1,12 @@
 import clsx from 'clsx';
 import { VFC } from 'react';
 import { NavLink } from 'react-router-dom';
+import { AppIconProps } from '~/components/app/AppIcon/AppIcon';
 
 interface SidebarNavItemProps {
   text: string;
   value: string;
-  icon: VFC;
+  icon: VFC<AppIconProps>;
   className?: string;
 }
 
@@ -15,7 +16,7 @@ const SidebarNavItem = (props: SidebarNavItemProps) => {
   return (
     <li className={clsx(['dashboard-layout__item', props.className])}>
       <NavLink exact className="dashboard-layout__link" to={props.value}>
-        <Icon />
+        <Icon size="large" />
         <span className="dashboard-layout__link--text">
           {props.text}
         </span>
