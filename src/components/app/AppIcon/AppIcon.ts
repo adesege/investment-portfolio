@@ -1,4 +1,5 @@
 export interface AppIconProps {
-  size?: 'small'| 'large';
+  size?: 'small'| 'large' | 'x-large';
   color?: string;
+  className?: string;
 }

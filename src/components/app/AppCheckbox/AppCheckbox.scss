@@ -1,0 +1,26 @@
+.app-checkbox {
+  display: inline-flex;
+  width: 26px;
+  height: 26px;
+  background-color: #fff;
+  border: 1px solid #dcd9d9;
+  cursor: pointer;
+  margin-right: 4px;
+  padding: 6px;
+
+  &__input {
+    display: none;
+  }
+
+  &__custom {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    width: inherit;
+    cursor: pointer;
+  }
+
+  &__input:checked + &__custom {
+    background-color: #1f1f1f;
+  }
+}

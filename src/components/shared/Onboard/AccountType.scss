@@ -1,0 +1,52 @@
+.do-account {
+  display: flex;
+  align-items: flex-start;
+  padding: 36px 0 0 18px;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    bottom: -70px;
+    right: 0;
+    background-image: var(--account-type-src);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: rotate(-17deg);
+  }
+
+  & + & {
+    margin-top: 40px;
+  }
+
+  &__content {
+    margin-left: 20px;
+  }
+
+  &__title {
+    font-size: 21px;
+  }
+
+  &__features {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+    margin-bottom: 27px;
+
+    &--list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    &--item {
+      & + & {
+        margin-top: 19px;
+      }
+    }
+  }
+}

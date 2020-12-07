@@ -4,4 +4,5 @@ export enum IRoute {
   signin='/auth/signin',
   signup='/auth/signup',
   dashboard = '/dashboard',
+  onboarding = '/dashboard/onboarding',
 }

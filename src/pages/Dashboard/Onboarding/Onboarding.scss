@@ -1,0 +1,36 @@
+.dashboard-onboarding {
+  &__logo {
+    margin-right: 78px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+  }
+
+  .app-modal {
+    &__body {
+      width: 1110px;
+      max-width: 100%;
+      margin: auto;
+    }
+  }
+
+  &__title {
+    margin-bottom: 42px;
+  }
+
+  &__button--submit {
+    width: 42.43%;
+    margin-left: auto;
+    display: flex;
+    margin-top: 60px;
+  }
+
+  &__account--classic {
+    &::after {
+      bottom: -60px;
+      transform: rotate(-17deg) scale(1.5);
+    }
+  }
+}

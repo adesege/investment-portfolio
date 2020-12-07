@@ -7,6 +7,7 @@ import IconArrowEast from '~/components/icons/IconArrowEast';
 import IconEnvelopeCircle from '~/components/icons/IconEnvelopeCircle';
 import IconUserCircle from '~/components/icons/IconUserCircle';
 import useAuth from '~/hooks/use-auth';
+import { IRoute } from '~/interfaces/route';
 import './Dashboard.scss';
 
 const Dashboard = () => {
@@ -45,7 +46,7 @@ const Dashboard = () => {
             title="Action 2: Verify your Identity"
             icon={IconUserCircle}
             description="To access the amazing investment business experience, Kindly help us to know you better"
-            action={<AppButton to="/start" label="Start Now" className="primary font-medium" append={<IconArrowEast />} />}
+            action={<AppButton to={IRoute.onboarding} label="Start Now" className="primary font-medium" append={<IconArrowEast />} />}
           />
         </div>
       </div>

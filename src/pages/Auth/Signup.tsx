@@ -139,7 +139,12 @@ const Signup = () => {
         label="Create My Free Account"
         className="primary--bg w-full justify-between auth__button--submit"
         disabled={isLoading}
-        append={<IconArrowEast color="white" />}
+        append={(
+          <>
+            <AppSpacer />
+            <IconArrowEast />
+          </>
+        )}
         prepend={<AppSpacer />}
       />
 

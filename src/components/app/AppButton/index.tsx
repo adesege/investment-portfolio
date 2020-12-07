@@ -22,15 +22,16 @@ const AppButton = (props: PropsWithChildren<AppButtonProps>) => {
     <Tag
       type={props.type}
       disabled={props.disabled}
+      to={props.to}
       className={clsx(['app-button', {
         [`app-button__size--${props.size}`]: !!props.size,
         'app-button__icon': props.icon,
       }, props.className])}
     >
-      {props.prepend && <div className="app-button__prepend">{ props.prepend }</div>}
+      {props.prepend && props.prepend }
       <div className="app-button__wrapper">{props.label || props.children}</div>
       &nbsp;
-      {props.append && <div className="app-button__append">{ props.append }</div>}
+      {props.append && props.append }
     </Tag>
   );
 };

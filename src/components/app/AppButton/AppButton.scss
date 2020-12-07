@@ -35,8 +35,9 @@
     &:focus:not(:disabled) {
       background-color: #fff;
       color: var(--app-color-primary);
-      outline: var(--app-color-primary);
-      border: 1px solid var(--app-color-primary);
+      fill: currentColor;
+      outline: currentColor;
+      border: 1px solid currentColor;
     }
   }
 

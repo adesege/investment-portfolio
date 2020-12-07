@@ -45,6 +45,10 @@ button {
   font-size: 24px;
 }
 
+.text-title {
+  font-size: 30px;
+}
+
 .icon {
   display: inline-block;
 
@@ -63,10 +67,11 @@ button {
 
 .primary {
   color: var(--app-color-primary);
-  fill: var(--app-color-primary);
+  fill: currentColor;
 
   &--bg {
     background-color: var(--app-color-primary);
+    fill: currentColor;
     color: #fff;
   }
 }
@@ -121,4 +126,24 @@ button {
 
 .font-medium {
   font-weight: 500;
+}
+
+.mb-2 {
+  margin-bottom: 8px;
+}
+
+.ma-0 {
+  margin: 0;
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.mr-4 {
+  margin-right: 16px;
+}
+
+.d-inline-block {
+  display: inline-block;
 }
