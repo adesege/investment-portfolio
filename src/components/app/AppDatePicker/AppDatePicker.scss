@@ -1,0 +1,11 @@
+$pd-day-hover-bg: var(--app-color-primary);
+$pd-day-today-color: var(--app-color-error);
+$pd-day-selected-bg: var(--app-color-primary);
+
+@import "pikaday/scss/pikaday.scss";
+
+.app-datepicker {
+  .pika-single {
+    position: absolute !important;
+  }
+}

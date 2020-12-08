@@ -89,13 +89,6 @@
   &__button--submit {
     margin-top: 40px;
     margin-bottom: 25px;
-
-    &:hover,
-    &:focus {
-      .icon svg {
-        fill: var(--app-color-primary);
-      }
-    }
   }
 
   &__action {

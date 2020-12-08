@@ -1,0 +1,23 @@
+.app-checkbox-group {
+  &__hint {
+    margin: 17px 0 0 0;
+  }
+
+  &--error {
+    .app-checkbox-group__hint {
+      color: var(--app-color-error);
+    }
+  }
+
+  &--error.app-checkbox-group--with-label {
+    .app-checkbox-label {
+      border-color: var(--app-color-error);
+    }
+  }
+
+  &--error:not(.app-checkbox-group--with-label) {
+    .app-checkbox {
+      border-color: var(--app-color-error);
+    }
+  }
+}

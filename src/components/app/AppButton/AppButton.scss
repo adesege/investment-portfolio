@@ -3,10 +3,17 @@
   align-items: center;
   justify-content: center;
 
-  &:not(a) {
+  &__tag--button {
     font-size: 18px;
     border: none;
     cursor: pointer;
+  }
+
+  &__size--small.app-button__tag--button {
+    height: 40px;
+    padding: 0 17px;
+    line-height: 40px;
+    width: 160px;
   }
 
   &:disabled {
@@ -23,19 +30,26 @@
     padding: 0 27px;
   }
 
-  &__size--small:not(a) {
-    height: 40px;
-    padding: 0 17px;
-    line-height: 40px;
-    width: 160px;
+  &__primary {
+    background-color: var(--app-color-primary);
+    color: #fff;
+    fill: currentColor;
   }
 
-  &.primary--bg {
+  &__secondary {
+    background-color: transparent;
+    color: var(--app-color-primary);
+    border: 1px solid #dcd9d9;
+    fill: currentColor;
+  }
+
+  &__primary,
+  &__secondary {
     &:hover:not(:disabled),
     &:focus:not(:disabled) {
-      background-color: #fff;
       color: var(--app-color-primary);
       fill: currentColor;
+      background-color: #fff;
       outline: currentColor;
       border: 1px solid currentColor;
     }

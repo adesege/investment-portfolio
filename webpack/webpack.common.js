@@ -21,6 +21,7 @@ const plugins = [
   new webpack.DefinePlugin({
     'process.env': JSON.stringify(dotenv.parsed || process.env),
   }),
+  new webpack.IgnorePlugin(/moment/),
   new CopyPlugin({
     patterns: [
       { from: './src/static' },
@@ -83,6 +84,7 @@ module.exports = {
           isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
           'css-loader',
           'postcss-loader',
+          'sass-loader',
         ],
       },
       {

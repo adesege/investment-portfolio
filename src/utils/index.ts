@@ -18,3 +18,12 @@ export const transformValidationError = (error: Record<string, string>) => (
       return prevValue;
     }, {})
 );
+
+export const clickOutsideListener = (
+  element: HTMLElement,
+  callback: CallableFunction,
+) => (event: any): any => {
+  if (!element.contains(event.target)) {
+    callback();
+  }
+};

@@ -1,11 +1,13 @@
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import AppButton from '~/components/app/AppButton';
-import AppCheckboxGroup from '~/components/app/AppCheckbookGroup';
+import AppCheckboxGroup from '~/components/app/AppCheckboxGroup';
 import AppModal from '~/components/app/AppModal';
 import AppSpacer from '~/components/app/AppSpacer';
 import IconArrowEast from '~/components/icons/IconArrowEast';
-import AccountType from '~/components/shared/Onboard/AccountType';
-import Header from '~/components/shared/Onboard/Header';
+import AccountType from '~/components/shared/Onboarding/AccountType';
+import Header from '~/components/shared/Onboarding/Header';
+import { IRoute } from '~/interfaces/route';
 import './Onboarding.scss';
 
 const Onboarding = () => {
@@ -47,11 +49,13 @@ const Onboarding = () => {
   ];
 
   const [accountType, setAccountType] = useState('');
+  const history = useHistory();
 
   const onChange = (type: string) => setAccountType(type);
+  const onSave = () => history.push(IRoute.onboardingInfo);
 
   return (
-    <AppModal open fullScreen className="dashboard-onboarding" header={Header}>
+    <AppModal open fullScreen className="dashboard-onboarding" header={<Header title="Your gateway to amazing investment opportunities" />}>
       <h1 className="text-title dashboard-onboarding__title mt-0">Select Account Type</h1>
 
       <AppCheckboxGroup mandatory group onChange={onChange}>
@@ -72,7 +76,9 @@ const Onboarding = () => {
       <AppButton
         size="big"
         label="Save & Continue"
-        className="primary--bg w-full justify-between dashboard-onboarding__button--submit"
+        variant="primary"
+        className="w-full justify-between dashboard-onboarding__button--submit"
+        onClick={onSave}
         append={(
           <>
             <AppSpacer />

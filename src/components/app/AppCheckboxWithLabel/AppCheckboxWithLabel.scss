@@ -1,0 +1,18 @@
+.app-checkbox-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  border: 1px solid #dcd9d9;
+  background-color: #ffffff;
+  flex: 1;
+
+  &:hover {
+    border-color: var(--app-color-black);
+  }
+
+  &__label {
+    margin-left: 30px;
+    display: inline-block;
+  }
+}

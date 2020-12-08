@@ -137,7 +137,8 @@ const Signup = () => {
         type="submit"
         size="big"
         label="Create My Free Account"
-        className="primary--bg w-full justify-between auth__button--submit"
+        variant="primary"
+        className="w-full auth__button--submit"
         disabled={isLoading}
         append={(
           <>

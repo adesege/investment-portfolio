@@ -1,24 +1,18 @@
 import { nanoid } from 'nanoid';
 import {
-  ChangeEvent, useContext, useEffect, useRef,
+  ChangeEvent, useEffect, useRef,
 } from 'react';
-import AppCheckboxContext from '../AppCheckbookGroup/AppCheckboxContext';
+import { AppCheckboxProps } from './appCheckbox';
 import './AppCheckbox.scss';
-
-interface AppCheckboxProps {
-  checked?:boolean;
-  onChange?: (value: string) => void;
-  name?: string;
-  value?: string;
-}
+import useCheckbox from './useCheckbox';
 
 const AppCheckbox = (props: AppCheckboxProps) => {
   const idRef = useRef<string>();
   const ref = useRef<HTMLLabelElement>();
 
-  const context = useContext(AppCheckboxContext);
+  const context = useCheckbox();
 
-  const onChange = props.onChange || context.onChange;
+  const onChange = props.onChange || context.onChange || (() => null);
 
   useEffect(() => {
     idRef.current = `app-checkbox-${nanoid()}`;

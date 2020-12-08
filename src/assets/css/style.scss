@@ -2,8 +2,9 @@
   --app-color-primary: #258c60;
   --app-color-secondary: #0e0e0e;
   --app-color-muted: #999999;
-  --app-color-text: var(--app-color-secondary);
+  --app-color-text: var(--app-color-black);
   --app-color-error: #ea0005;
+  --app-color-black: #1f1f1f;
 }
 
 body {
@@ -49,6 +50,10 @@ button {
   font-size: 30px;
 }
 
+.text-body {
+  font-size: 18px;
+}
+
 .icon {
   display: inline-block;
 
@@ -68,12 +73,6 @@ button {
 .primary {
   color: var(--app-color-primary);
   fill: currentColor;
-
-  &--bg {
-    background-color: var(--app-color-primary);
-    fill: currentColor;
-    color: #fff;
-  }
 }
 
 .secondary {
@@ -85,6 +84,10 @@ button {
 }
 
 .white {
+  &--bg {
+    background-color: #fff;
+  }
+
   &--icon {
     svg {
       fill: #fff;
@@ -112,8 +115,20 @@ button {
   justify-content: center;
 }
 
+.justify-end {
+  justify-content: flex-end;
+}
+
 .mb-5 {
   margin-bottom: 20px;
+}
+
+.mb-9 {
+  margin-bottom: 36px;
+}
+
+.mt-9 {
+  margin-top: 36px;
 }
 
 .font-normal {
@@ -146,4 +161,14 @@ button {
 
 .d-inline-block {
   display: inline-block;
+}
+
+.px-10 {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.py-11 {
+  padding-top: 44px;
+  padding-bottom: 44px;
 }

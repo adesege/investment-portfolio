@@ -1,0 +1,15 @@
+.do-basic-info {
+  &__gender {
+    display: block;
+
+    .app-checkbox-group__wrapper {
+      display: flex;
+      align-items: center;
+      margin-top: 14px;
+    }
+
+    .app-checkbox-label + .app-checkbox-label {
+      margin-left: 61px;
+    }
+  }
+}

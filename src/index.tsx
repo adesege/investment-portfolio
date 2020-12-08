@@ -47,7 +47,8 @@ const Main = lazy(() => import(/* webpackChunkName: "pages/main" */ './pages/Mai
 const AuthSignup = lazy(() => import(/* webpackChunkName: "pages/auth/signup" */ './pages/Auth/Signup'));
 const AuthSignin = lazy(() => import(/* webpackChunkName: "pages/auth/signin" */ './pages/Auth/Signin'));
 const Dashboard = lazy(() => import(/* webpackChunkName: "pages/dashboard" */ './pages/Dashboard'));
-const DashboardOnboard = lazy(() => import(/* webpackChunkName: "pages/dashboard/onboard" */ './pages/Dashboard/Onboarding'));
+const DashboardOnboard = lazy(() => import(/* webpackChunkName: "pages/dashboard/onboarding" */ './pages/Dashboard/Onboarding'));
+const DashboardOnboardInfo = lazy(() => import(/* webpackChunkName: "pages/dashboard/onboarding/info" */ './pages/Dashboard/Onboarding/Info'));
 
 const App = () => (
   <StrictMode>
@@ -74,6 +75,11 @@ const App = () => (
                       exact
                       path={IRoute.onboarding}
                       component={DashboardOnboard}
+                    />
+                    <Route
+                      exact
+                      path={IRoute.onboardingInfo}
+                      component={DashboardOnboardInfo}
                     />
                   </Switch>
                 </Suspense>

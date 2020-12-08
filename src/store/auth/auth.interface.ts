@@ -1,8 +1,14 @@
 export interface IAuthUser {
   id: string;
-  firstname: string;
-  lastname: string;
+  firstName: string;
+  lastName: string;
   email: string;
+  middleName: string;
+  username: string;
+  motherMaidenName:string;
+  dateOfBirth: string;
+  gender: string;
+  phoneNumber: string;
 }
 
 export interface ISetCurrentUser {
@@ -23,4 +29,12 @@ export interface ISignupState extends ILoginState {
   firstname: string;
   lastname: string;
   email: string;
+}
+
+export interface BasicInfoFormData {
+  middlename: string;
+  date_of_birth: string;
+  phone_number: string;
+  gender: string;
+  mother_maiden_name: string;
 }

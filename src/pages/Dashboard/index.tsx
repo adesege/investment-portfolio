@@ -20,14 +20,14 @@ const Dashboard = () => {
           <h1 className="dashboard__title text-heading secondary">
             Welcome
             {' '}
-            {user.firstname}
+            {user.firstName}
           </h1>
           <p className="dashboard__description text-subheading muted">Good to have you on board, get started with the actions below</p>
         </div>
 
         <AppSpacer />
 
-        <AppButton className="primary--bg">+ Invest</AppButton>
+        <AppButton variant="primary">+ Invest</AppButton>
       </div>
 
       <div className="dashboard__banners">

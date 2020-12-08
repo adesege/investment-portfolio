@@ -1,18 +1,11 @@
 .dashboard-onboarding {
-  &__logo {
-    margin-right: 78px;
-  }
-
-  &__header {
-    display: flex;
-    align-items: center;
-  }
-
   .app-modal {
     &__body {
       width: 1110px;
       max-width: 100%;
       margin: auto;
+      padding-top: 171px;
+      padding-bottom: 171px;
     }
   }
 

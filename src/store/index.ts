@@ -1,4 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
+// eslint-disable-next-line import/no-cycle
 import authReducer from './auth';
 import flashReducer from './flash';
 
