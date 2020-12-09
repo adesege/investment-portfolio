@@ -1,4 +1,4 @@
-import Female from '~/assets/svg/Female.svg';
+import Female from '~/assets/svg/female.svg';
 import AppIcon from '../app/AppIcon';
 import { AppIconProps } from '../app/AppIcon/AppIcon';
 
