@@ -2,8 +2,9 @@
 
 <img src="./docs/shot.png" />
 
-- Custom design system
+- With Custom design system
 
+- Live application [https://investment-portfolio.netlify.app](https://investment-portfolio.netlify.app)
 
 ## Installation
 
