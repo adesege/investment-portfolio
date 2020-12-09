@@ -85,6 +85,13 @@
       color: var(--app-color-primary);
     }
 
+    &__completed &__status::before {
+      content: "";
+      background-image: url("~/static/check.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
     &__error &__status,
     &__error &__title {
       color: var(--app-color-error);

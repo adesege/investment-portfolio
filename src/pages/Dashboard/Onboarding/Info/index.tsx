@@ -5,6 +5,7 @@ import Header from '~/components/shared/Onboarding/Header';
 import './Info.scss';
 
 const BasicInfo = lazy(() => import(/* webpackChunkName: "onboarding/tabs/basic-info" */ '~/components/shared/Onboarding/Info/tabs/BasicInfo'));
+const Address = lazy(() => import(/* webpackChunkName: "onboarding/tabs/address" */ '~/components/shared/Onboarding/Info/tabs/Address'));
 
 const Info = () => {
   const tabItems = [
@@ -16,7 +17,7 @@ const Info = () => {
     {
       title: 'Address',
       description: 'We would like to know your origin',
-      tab: BasicInfo,
+      tab: Address,
     },
     {
       title: 'Next of Kin',
@@ -42,7 +43,7 @@ const Info = () => {
       className="do-info"
       header={<Header title="We need to know you to serve you better" />}
     >
-      <AppTab items={tabItems} />
+      <AppTab tab={1} items={tabItems} />
     </AppModal>
   );
 };

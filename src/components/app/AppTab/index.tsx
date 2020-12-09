@@ -10,10 +10,11 @@ import AppTabNavigation from './AppTabNavigation';
 
 interface AppTabProps {
   items: AppTabNavigationItems
+  tab?: number;
 }
 
 const AppTab = (props: PropsWithChildren<AppTabProps>) => {
-  const [tabIndex, setTabIndex] = useState(0);
+  const [tabIndex, setTabIndex] = useState(props.tab);
   const [completedTabs, setCompletedTabs] = useState<number[]>([]);
   const [errorTabs, setErrorTabs] = useState<number[]>([]);
 
@@ -41,6 +42,10 @@ const AppTab = (props: PropsWithChildren<AppTabProps>) => {
       </div>
     </AppTabContext.Provider>
   );
+};
+
+AppTab.defaultProps = {
+  tab: 0,
 };
 
 export default AppTab;

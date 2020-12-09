@@ -2,6 +2,8 @@ import * as Pikaday from 'pikaday';
 import {
   ChangeEvent,
 
+  MouseEvent,
+
   PropsWithChildren, useEffect, useMemo, useRef,
 } from 'react';
 import IconCalendar from '~/components/icons/IconCalendar';
@@ -41,7 +43,9 @@ const AppDatePicker = (props: PropsWithChildren<AppDatePickerProps>) => {
     };
   }, [picker]);
 
-  const onToggle = (event: MouseEvent | ChangeEvent<HTMLButtonElement>) => {
+  const onToggle = (
+    event: MouseEvent<HTMLDivElement> | ChangeEvent<HTMLButtonElement|HTMLDivElement>,
+  ) => {
     event.stopPropagation();
 
     if (picker.isVisible()) {

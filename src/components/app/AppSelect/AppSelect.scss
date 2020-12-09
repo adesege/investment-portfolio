@@ -1,0 +1,80 @@
+$highlight: #275efe;
+
+.app-select {
+  position: relative;
+  outline: none;
+
+  & + & {
+    margin-top: 30px;
+  }
+
+  &:focus &__selected,
+  &:hover &__selected,
+  &--open &__selected {
+    border-color: var(--app-color-black);
+  }
+
+  &--open &__selected:after {
+    border-top-color: transparent;
+    border-bottom-color: var(--app-color-black);
+    top: calc(50% - 7.5px);
+  }
+
+  &--open &__options {
+    display: block;
+  }
+
+  &__placeholder {
+    color: var(--app-color-muted);
+  }
+
+  &__selected {
+    color: var(--app-color-black);
+    padding: 16px 18px;
+    border: 1px solid #dcd9d9;
+    margin-top: 14px;
+    cursor: pointer;
+    position: relative;
+    background: #fff;
+    outline: none;
+    user-select: none;
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      border: 5px solid transparent;
+      border-top-color: var(--app-color-black);
+      top: calc(50% - 2.5px);
+      right: 18px;
+    }
+  }
+
+  &__options {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background: #fff;
+    border: 1px solid currentColor;
+    border-top: none;
+    overflow: hidden;
+    height: 300px;
+    overflow: auto;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__option {
+    padding: 17.8px 18px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &--selected {
+      color: var(--app-color-primary);
+      cursor: default;
+    }
+  }
+}

@@ -89,6 +89,7 @@ module.exports = {
       },
       {
         test: /\.svg$/,
+        issuer: /\.tsx$/,
         use: [{
           loader: '@svgr/webpack',
           options: {
@@ -97,12 +98,9 @@ module.exports = {
         }],
       },
       {
-        test: /\.(woff|woff2|ttf|otf)$/,
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]',
-          outputPath: 'fonts/',
-        },
+        test: /\.svg$/,
+        issuer: /\.s?css$/,
+        loader: 'url-loader',
       },
     ],
   },
