@@ -2,6 +2,7 @@ import { ChangeEvent, FormEvent, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import AppButton from '~/components/app/AppButton';
+import AppCheckbox from '~/components/app/AppCheckbox';
 import AppFlash from '~/components/app/AppFlash';
 import AppInput from '~/components/app/AppInput';
 import AppSpacer from '~/components/app/AppSpacer';
@@ -15,7 +16,11 @@ const Signin = () => {
   const [formData, setFormData] = useState<ILoginState>({ username: '', password: '' });
   const [formError, setFormError] = useState<ILoginState>({ username: '', password: '' });
   const [isLoading, setIsLoading] = useState(false);
+  const [isRememberMe, setRememberMe] = useState(false);
+
   const dispatch = useDispatch<AppDispatch>();
+
+  const onRememberMe = (value: string) => setRememberMe(value === 'yes');
 
   const onChange = (event: ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
@@ -66,6 +71,7 @@ const Signin = () => {
       />
 
       <div className="auth__action">
+        <AppCheckbox label="Remember me" name="remember_me" value="yes" onChange={onRememberMe} checked={isRememberMe === true} />
         <Link to="/" className="secondary text-underline">I forgot my password</Link>
       </div>
 

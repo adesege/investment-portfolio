@@ -1,12 +1,17 @@
 .app-checkbox {
   display: inline-flex;
-  width: 26px;
-  height: 26px;
-  background-color: #fff;
-  border: 1px solid #dcd9d9;
-  cursor: pointer;
-  margin-right: 4px;
-  padding: 6px;
+  align-items: center;
+
+  &__label {
+    display: inherit;
+    width: 26px;
+    height: 26px;
+    background-color: #fff;
+    border: 1px solid #dcd9d9;
+    cursor: pointer;
+    margin-right: 4px;
+    padding: 6px;
+  }
 
   &__input {
     display: none;
@@ -22,5 +27,12 @@
 
   &__input:checked + &__custom {
     background-color: #1f1f1f;
+  }
+
+  &__placeholder {
+    margin-left: 11px;
+    display: inline-block;
+    font-size: 14px;
+    color: var(--app-color-secondary);
   }
 }

@@ -37,18 +37,21 @@ const AppCheckbox = (props: AppCheckboxProps) => {
   };
 
   return (
-    <label ref={ref} htmlFor={idRef.current} className="app-checkbox">
-      <input
-        type="checkbox"
-        name={props.name}
-        id={idRef.current}
-        className="app-checkbox__input"
-        onChange={onInputChange}
-        checked={props.checked}
-        value={props.value}
-      />
-      <span className="app-checkbox__custom" />
-    </label>
+    <div className="app-checkbox">
+      <label ref={ref} htmlFor={idRef.current} className="app-checkbox__label">
+        <input
+          type="checkbox"
+          name={props.name}
+          id={idRef.current}
+          className="app-checkbox__input"
+          onChange={onInputChange}
+          checked={props.checked}
+          value={props.value}
+        />
+        <span className="app-checkbox__custom" />
+      </label>
+      {props.label && <span className="app-checkbox__placeholder">{props.label}</span> }
+    </div>
   );
 };
 

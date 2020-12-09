@@ -1,4 +1,5 @@
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import AppButton from '~/components/app/AppButton';
 import AppSpacer from '~/components/app/AppSpacer';
 import { IRoute } from '~/interfaces/route';
 
@@ -14,7 +15,7 @@ const AuthNav = () => {
     <nav className="auth__nav">
       <AppSpacer />
       <span>{label}</span>
-      <Link to={route} className="auth__button--login">{buttonLabel}</Link>
+      <AppButton to={route} variant="secondary" className="auth__button--login">{buttonLabel}</AppButton>
     </nav>
   );
 };
