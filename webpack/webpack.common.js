@@ -44,8 +44,9 @@ const plugins = [
       minifyURLs: !isDev,
     },
   }),
-  new BundleAnalyzerPlugin({ generateStatsFile: process.env.BUILD_ANALYZER === '1', statsFilename: 'stats.json' }),
 ];
+
+if (process.env.BUILD_ANALYZER === '1') plugins.push(new BundleAnalyzerPlugin({ generateStatsFile: true, statsFilename: 'stats.json' }));
 
 module.exports = {
   context: rootDir,
