@@ -6,7 +6,7 @@
   "scripts": {
     "start:dev": "webpack serve --color --mode development --config webpack/config.development.js",
     "build": "NODE_ENV=production rm -rf ./dist && webpack --color --mode production  --config webpack/config.production.js",
-    "build:analyze": "BUILD_ANALYZER=1 yarn build --profile --json > dist/stats.json && webpack-bundle-analyzer dist/stats.json"
+    "build:analyze": "BUILD_ANALYZER=1 yarn build --profile --json && webpack-bundle-analyzer dist/stats.json"
   },
   "devDependencies": {
     "@svgr/webpack": "^5.5.0",

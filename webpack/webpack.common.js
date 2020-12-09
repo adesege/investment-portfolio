@@ -10,7 +10,6 @@ const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const dotenv = require('dotenv').config();
 
 const isDev = process.env.NODE_ENV !== 'production';
-const isBuildAnalyzer = process.env.BUILD_ANALYZER === '1';
 const rootDir = path.join(__dirname, '../');
 
 const plugins = [
@@ -21,7 +20,7 @@ const plugins = [
   new webpack.DefinePlugin({
     'process.env': JSON.stringify(dotenv.parsed || process.env),
   }),
-  new webpack.IgnorePlugin(/moment/),
+  new webpack.IgnorePlugin({ resourceRegExp: /^moment$/, contextRegExp: /pikaday$/ }),
   new CopyPlugin({
     patterns: [
       { from: './src/static' },
@@ -45,8 +44,8 @@ const plugins = [
       minifyURLs: !isDev,
     },
   }),
+  new BundleAnalyzerPlugin({ generateStatsFile: process.env.BUILD_ANALYZER === '1', statsFilename: 'stats.json' }),
 ];
-if (isBuildAnalyzer) plugins.push(new BundleAnalyzerPlugin());
 
 module.exports = {
   context: rootDir,
