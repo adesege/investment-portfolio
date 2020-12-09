@@ -43,7 +43,7 @@ const Info = () => {
       className="do-info"
       header={<Header title="We need to know you to serve you better" />}
     >
-      <AppTab tab={1} items={tabItems} />
+      <AppTab items={tabItems} />
     </AppModal>
   );
 };
